@@ -5,28 +5,22 @@ pragma solidity >=0.6.0 <0.8.0;
 import './Collector.sol';
 
 contract Factory1 is Collect{
-    uint public loanAmount;
+    uint public loanAmount; //
+    uint public minBid; //
     uint public loanAmountLeft;
-    uint public minBid;
-    uint public minIntrestRate;
-    uint public maxIntrestRate;
-    uint public totalParticipants;
-    uint public poolStartTime;
-    uint public participationTime;
-    uint public claimLoanTime;
-    uint public BidAmount;
-    uint public newBid;
-    uint public loanNeedOfBorrower;
-    uint public collateral;
-    uint public totalBid;
+    uint public minIntrestRate; //
+    uint public maxIntrestRate; //
+    uint public totalParticipants; //
+    uint public poolStartTime; //
+    uint public BidAmount; 
     uint public claimAmount;
+    uint public loanNeedOfBorrower; //
+    uint public collateral;
     uint public intrestRateonLoan;
-    uint public payBackAmount;
-    uint public intrestRate;
-    uint public returnCollateral;
-    uint public collateralIntrestrate;
-    bool public bidDecision;
-    bool public poolDecision;
+    uint public payBackAmount; //
+    uint public intrestRate; //
+    uint public returnCollateral; //
+    uint public collateralIntrestrate; 
     address internal borrowersAdd;
     address internal lendersAdd;
     address internal highestBiddersAdd;
@@ -115,6 +109,7 @@ contract Factory1 is Collect{
         BorrowersParam(loanNeedOfBorrower , collateral);
         require(loanNeedOfBorrower <= loanAmount);
         require(collateral > 0);
+        uint participationTime; 
         isParticipant[msg.sender] = true;
         totalParticipants = totalParticipants++;
         participationTime = block.timestamp;
@@ -143,6 +138,10 @@ contract Factory1 is Collect{
     to become the higgest bidder, they will be able to do it
     */
     function Bidagain(uint _newAmount, bool _bidDecision) public {
+        uint totalBid;
+        uint  newBid;
+        bool bidDecision;
+
         require(bidDecision == true);
 
         newBid = _newAmount; //The borrower sets the new bid amount 
@@ -186,9 +185,10 @@ contract Factory1 is Collect{
     */
     function claimLoan() public {
         require(isParticipant[msg.sender]);
+        uint claimLoanTime;
         claimAmount = loanNeedOfBorrower;
         claimLoanTime = block.timestamp;
-        
+
         loanAmountLeft = loanAmount - loanNeedOfBorrower;
 
         returnCollateral = collateral + collateralIntrestrate;
@@ -215,6 +215,7 @@ contract Factory1 is Collect{
     *Note:- that lender has the option to take all his/her remining tokens if they wish so!
      */
     function continuePool(bool _poolDecision) public {
+        bool poolDecision;
         require(lender[msg.sender]);
         require(!borrower[msg.sender]);
 

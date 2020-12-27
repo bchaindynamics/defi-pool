@@ -39,11 +39,12 @@ contract LoanPoolFactory {
                 token
             );
             loanPool = address(newLoanPool);
+        
+        }
 
-        // totalPools public totalPools = totalpools+1;
         totalPools++;
 
-        emit LoanPoolNew(
+        emit NewLoanPool(
             totalPools,
             loanPool,
             maximumBidAmount * maxParticipants,

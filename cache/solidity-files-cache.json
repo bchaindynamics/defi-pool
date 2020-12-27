@@ -1,0 +1,185 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/tj/Desktop/letshack/contracts/Aave.sol": {
+      "lastModificationDate": 1609002786276,
+      "contentHash": "f1d37372d4fe91f2489972d358b71f03",
+      "sourceName": "contracts/Aave.sol",
+      "solcConfig": {
+        "version": "0.7.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./interfaces/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.7.3"
+      ],
+      "artifacts": [
+        "Aave",
+        "IAToken",
+        "IAaveLendingPool",
+        "IAaveLendingPoolCore"
+      ]
+    },
+    "/home/tj/Desktop/letshack/contracts/interfaces/IERC20.sol": {
+      "lastModificationDate": 1608455898178,
+      "contentHash": "63e1e1288d638a44f7b9473c5aa4f03e",
+      "sourceName": "contracts/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.3"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/home/tj/Desktop/letshack/contracts/AavePooledLoan.sol": {
+      "lastModificationDate": 1609003144547,
+      "contentHash": "1a5fff60041dad62fe0e7aa086e7b326",
+      "sourceName": "contracts/AavePooledLoan.sol",
+      "solcConfig": {
+        "version": "0.7.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Aave.sol",
+        "./interfaces/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.7.3"
+      ],
+      "artifacts": [
+        "PoolLoanAave"
+      ]
+    },
+    "/home/tj/Desktop/letshack/contracts/LoanPoolFactory.sol": {
+      "lastModificationDate": 1609003177331,
+      "contentHash": "059f480857d159798abcfac4563114d5",
+      "sourceName": "contracts/LoanPoolFactory.sol",
+      "solcConfig": {
+        "version": "0.7.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./AavePooledLoan.sol"
+      ],
+      "versionPragmas": [
+        "0.7.3"
+      ],
+      "artifacts": [
+        "LoanPoolFactory"
+      ]
+    },
+    "/home/tj/Desktop/letshack/contracts/Migrations.sol": {
+      "lastModificationDate": 1608455892862,
+      "contentHash": "704bcbdd84bdadfe8934c2d33adf9dc2",
+      "sourceName": "contracts/Migrations.sol",
+      "solcConfig": {
+        "version": "0.7.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.7.3"
+      ],
+      "artifacts": [
+        "Migrations"
+      ]
+    }
+  }
+}
